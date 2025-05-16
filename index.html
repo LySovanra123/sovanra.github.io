@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email "Send As" Configuration Guide</title>
+  <style>
+    :root {
+      --primary-color: #007BFF;
+      --secondary-color: #0056b3;
+      --accent-color: #e74c3c;
+      --light-bg: #f9f9f9;
+      --card-bg: #fff;
+      --border-color: #ddd;
+      --text-color: #333;
+      --highlight-bg: #eef;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: #666;
+      font-size: 1.1em;
+    }
+    
+    .guideline {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 30px;
+      padding: 25px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .guideline h2 {
+      color: var(--secondary-color);
+      margin-top: 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+    }
+    
+    .guideline h2 img.logo {
+      width: 30px;
+      margin-right: 10px;
+    }
+    
+    .guideline ol {
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    
+    .guideline li {
+      margin-bottom: 15px;
+      position: relative;
+      list-style-type: none;
+      counter-increment: step-counter;
+      padding-left: 40px;
+    }
+    
+    .guideline li:before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: var(--primary-color);
+      color: white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 25px;
+      font-size: 0.9em;
+    }
+    
+    .guideline img {
+      max-width: 100%;
+      height: auto;
+      margin: 15px 0;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      display: block;
+    }
+    
+    .email {
+      background: var(--highlight-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-weight: bold;
+      color: var(--secondary-color);
+    }
+    
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ffc107;
+      padding: 10px 15px;
+      margin: 15px 0;
+      font-size: 0.95em;
+    }
+    
+    .warning {
+      background: #ffebee;
+      border-left: 4px solid var(--accent-color);
+      padding: 10px 15px;
+      margin: 15px 0;
+      font-size: 0.95em;
+    }
+    
+    .time {
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: #666;
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      
+      .guideline {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Email "Send As" Configuration Guide</h1>
+      <p class="subtitle">Step-by-step instructions to set up email alias sending for different clients</p>
+    </header>
+
+    <div class="guideline">
+      <h2><img src="img/Thunderbird_2023_icon.png" alt="Thunderbird Logo" class="logo"> Mozilla Thunderbird</h2>
+      <ol>
+        <li>Open Thunderbird and go to <strong>Account Settings</strong> from the menu or by right-clicking your account.</li>
+        <img src="img/Mozilla step1.png" alt="Account Settings in Thunderbird" />
+        
+        <li>In the Account Settings window, click on <strong>"Manage Identities"</strong> button.</li>
+        <img src="img/Mozilla Step2.jpg" alt="Manage Identities in Thunderbird" />
+        
+        <li>In the Identities window:
+          <ul>
+            <li>Click <strong>"Add"</strong> to create a new identity</li>
+            <li>Set the email address to <span class="email">demo@your-name.com</span></li>
+            <li>Configure other settings as needed (name, organization, etc.)</li>
+          </ul>
+        </li>
+        <img src="img/Mozilla step3.png" alt="Add Identity in Thunderbird" />
+        
+        <li>Click <strong>"OK"</strong> to save changes, then restart Thunderbird for changes to take effect.</li>
+        <img src="img/Mozilla step4.jpg" alt="Restart Thunderbird" />
+      </ol>
+      
+      <div class="note">
+        <strong>Note:</strong> Thunderbird may take a few minutes to fully apply the changes after restart.
+      </div>
+    </div>
+
+    <div class="guideline">
+      <h2><img src="img/Outlook logo.jpg" alt="Outlook Logo" class="logo"> Microsoft Outlook</h2>
+      <ol>
+        <li>Go to <strong>File</strong> &gt; <strong>Account Settings</strong> &gt; <strong>Account Settings</strong>.</li>
+        <img src="img/Outlook step1.png" alt="Outlook Account Settings" />
+        
+        <li>Select your primary email account from the list and click <strong>"Change"</strong>.</li>
+        <img src="img/Outlook step2.png" alt="Modify Email Account in Outlook" />
+        
+        <li>In the Change Account window:
+          <ul>
+            <li>Click <strong>"More Settings"</strong></li>
+            <li>Navigate to the <strong>"Send As"</strong> tab</li>
+            <li>Enable the option and enter <span class="email">demo@your-name.com</span></li>
+          </ul>
+        </li>
+        <img src="img/Outlook step3.png" alt="Enable 'Send As' Permission in Outlook" />
+        
+        <li>Click <strong>"OK"</strong>, then <strong>"Next"</strong> and <strong>"Finish"</strong>. Restart Outlook to apply changes.</li>
+        <img src="img/Outlook step4.png" alt="Restart Outlook" />
+      </ol>
+      
+      <div class="warning">
+        <strong>Important:</strong> Outlook may require administrator privileges to make these changes.
+      </div>
+    </div>
+
+    <div class="guideline">
+      <h2><img src="img/Gmail_icon.png" alt="Gmail Logo" class="logo"> Google Mail (Gmail)</h2>
+      <ol>
+        <li>Click the gear icon and select <strong>"See all settings"</strong>, then go to the <strong>"Accounts and Import"</strong> tab.</li>
+        <img src="img/Google mail step1.png" alt="Gmail Settings" />
+        
+        <li>In the "Send mail as" section, click <strong>"Add another email address"</strong>.</li>
+        <img src="img/Google mail step2.png" alt="Add another email in Gmail" />
+        
+        <li>In the popup window:
+          <ul>
+            <li>Enter your name and the email address <span class="email">demo@your-name.com</span></li>
+            <li>Uncheck "Treat as an alias" if you want distinct sender addresses</li>
+            <li>Click <strong>"Next Step"</strong></li>
+          </ul>
+        </li>
+        <img src="img/Google mail step3.png" alt="Add email address in Gmail" />
+        
+        <li>Complete the verification process:
+          <ul>
+            <li>Gmail will send a verification code to the new address</li>
+            <li>Enter the code when prompted</li>
+            <li>Click <strong>"Verify"</strong></li>
+          </ul>
+        </li>
+        <img src="img/Google mail step4.png" alt="Verification in Gmail" />
+        <img src="img/Google mail step5.png" alt="Verification confirmation in Gmail" />
+        
+        <li>Once verified, you can select the sender address when composing new emails.</li>
+        <img src="img/Google mail step6.png" alt="Select sender in Gmail" />
+      </ol>
+      
+      <div class="note">
+        <strong>Tip:</strong> The verification process typically takes <span class="time">1-2 minutes</span>. If you don't receive the code, check your spam folder.
+      </div>
+    </div>
+
+    <footer>
+      <p>Need help? Contact your email administrator or IT support team.</p>
+      <p>Last updated: <span id="current-date"></span></p>
+    </footer>
+  </div>
+
+  <script>
+    // Add current date to footer
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric'
+    });
+  </script>
+</body>
+</html>
